@@ -27,12 +27,11 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "stdio.h"
-#include "string.h"
+#include "my1280app.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -102,6 +101,9 @@ int main(void)
   /* USER CODE BEGIN 2 */
     printf("Mfly@2025 Author: LSC\r\n");
     printf("osKernelStart\r\n");
+    printf("lora init begin\r\n");
+    LoRa_init();
+    printf("lora init success\r\n");
   /* USER CODE END 2 */
 
   /* Init scheduler */

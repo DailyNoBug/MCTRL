@@ -49,7 +49,7 @@ else ()
 endif ()
 
 include_directories(${includes})
-
+include_directories(radio myradio)
 add_definitions(${defines})
 
 file(GLOB_RECURSE SOURCES ${sources})

@@ -32,6 +32,7 @@
 /* USER CODE BEGIN PTD */
 extern ADC_HandleTypeDef hadc1;
 extern UART_HandleTypeDef huart2;
+extern UART_HandleTypeDef huart3;
 float ctrl[4];
 /* USER CODE END PTD */
 
@@ -195,7 +196,8 @@ void dataTransTask(void *argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+      HAL_UART_Transmit(&huart3, (uint8_t*)ctrl, sizeof(ctrl), HAL_MAX_DELAY);
+    osDelay(100);
   }
   /* USER CODE END dataTransTask */
 }
